@@ -17,6 +17,10 @@ iframe{position:fixed;left:0;right:0;top:env(safe-area-inset-top);bottom:0;width
 </style>
 </head>
 <body>
-<iframe src="https://script.google.com/macros/s/AKfycbzegQSu53Lr09IFjYehzixCT4vXCaVdvoZKJS2xD-EcaCSKFzBArFgwtXD22OWkwwoW/exec"></iframe>
+<iframe id="f"></iframe>
+<script>
+var d='';try{d=localStorage.getItem('devid')||'';if(!d){d=Date.now().toString(36)+Math.random().toString(36).slice(2,10);localStorage.setItem('devid',d)}}catch(e){}
+document.getElementById('f').src='https://script.google.com/macros/s/AKfycbzegQSu53Lr09IFjYehzixCT4vXCaVdvoZKJS2xD-EcaCSKFzBArFgwtXD22OWkwwoW/exec'+(d?'?dev='+d:'');
+</script>
 </body>
 </html>
